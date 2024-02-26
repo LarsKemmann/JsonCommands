@@ -5,10 +5,9 @@
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <Authors>LarsKemmann</Authors>
     <Company>LarsKemmann</Company>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A .NET helper library to simplify generating polymorphic JSON models from C# record hierarchies.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/LarsKemmann/JsonPolymorph.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/LarsKemmann/JsonPolymorph</RepositoryUrl>
     <PackageProjectUrl>https://github.com/LarsKemmann/JsonPolymorph</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>json asp.net</PackageTags>
@@ -16,7 +15,6 @@
     <PackageId>JsonPolymorph</PackageId>
     <Product>JsonPolymorph</Product>
     <Copyright>© 2023 Lars Kemmann</Copyright>
-    <Version>1.1.0</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
