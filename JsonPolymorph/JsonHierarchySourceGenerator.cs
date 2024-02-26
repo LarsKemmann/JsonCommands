@@ -28,7 +28,7 @@ using System.Runtime.Serialization;
 #nullable enable
 namespace {hierarchyBaseRecordType.Namespace}
 {{
-    [JsonConverter(typeof(JsonInheritanceConverter), ""discriminator"")]");
+    [JsonConverter(typeof(JsonInheritanceConverter<{hierarchyBaseRecordType.RecordType}>), ""discriminator"")]");
 
                 foreach (var x in receiver.PotentialDerivedRecordTypes.Where(typeHierarchy =>
                     typeHierarchy.Last() == hierarchyBaseRecordType).OrderBy(typeHierarchy => typeHierarchy.First()))
