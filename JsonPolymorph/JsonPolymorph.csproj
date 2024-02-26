@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <Authors>LarsKemmann</Authors>
     <Company>LarsKemmann</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -11,22 +12,27 @@
     <PackageProjectUrl>https://github.com/LarsKemmann/JsonPolymorph</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>json asp.net</PackageTags>
-    <PackageReleaseNotes>1.0.1 downgrades Newtonsoft.Json for compatibility.</PackageReleaseNotes>
+    <PackageReleaseNotes>1.1.0 updated to work with the latest NJsonSchema.</PackageReleaseNotes>
     <PackageId>JsonPolymorph</PackageId>
     <Product>JsonPolymorph</Product>
-    <Copyright>© 2021 Lars Kemmann</Copyright>
-    <Version>1.0.1</Version>
+    <Copyright>© 2023 Lars Kemmann</Copyright>
+    <Version>1.1.0</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.10.0" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2" PrivateAssets="all" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="NJsonSchema" Version="10.5.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NJsonSchema" Version="11.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
+    
+  <ItemGroup>
+      <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   
 </Project>
