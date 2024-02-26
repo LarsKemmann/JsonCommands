@@ -20,7 +20,7 @@ jobs:
       - name: Test
         run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
       - name: Pack
-        run: dotnet pack --configuration Release /p:Version=${VERSION} /p:PackageReleaseNotes="Your release notes here" --no-build --output .
+        run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
       - name: Push
         run: dotnet nuget push JsonPolymorph.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_PUSH_KEY}
         env:
@@ -33,5 +33,5 @@ jobs:
         with:
           tag_name: ${{ env.VERSION }}
           release_name: Release ${{ env.VERSION }}
-          draft: false
+          draft: true
           prerelease: false
