@@ -70,7 +70,9 @@ namespace JsonPolymorph
                         baseType = baseType.BaseType;
                     }
                     while (baseType != null && baseType.SpecialType != SpecialType.System_Object);
-                    PotentialDerivedRecordTypes.Add(derivedRecordType);
+
+                    if (derivedRecordType.Count > 1)
+                        PotentialDerivedRecordTypes.Add(derivedRecordType);
                 }
             }
 #if DEBUG
